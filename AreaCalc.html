@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Area Calculator</title>
+        <style>
+            body {
+                text-align: left;
+            }
+
+            input {
+                width: 100%;
+                min-height: fit-content;
+                border-radius: 2px;
+                padding: 2px;
+            }
+            button {
+                background: green;
+                color: wheat;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Please select the number for the shape which area you want to find:</h1>
+        <br><br>
+        <p><mark>1.</mark> Parralelogram</p>
+        <p><mark>2.</mark> Circle</p>
+        <p><mark>3.</mark> Rectangle</p>
+        <p><mark>4.</mark> Triangle</p>
+        <br><br>
+        <input type="number" min="1" max="4" id="inp">
+        <br>
+        <button onclick="doo()">Click</button>
+
+        <script>
+            function doo() {
+                var inp = document.getElementById("inp").value;
+                
+                if (inp == 1) {
+                    var width = prompt("Please enter the width");
+                    var base = prompt("Please enter the base height");
+                    var result = base*width;
+                    alert("The answer is " + result);
+                }
+
+                else if (inp == 2) {
+                    var r = prompt("Please enter the radius");
+                    var result = r*r*3.141;
+                    alert("The answer is " + result);
+                }
+
+                else if (inp == 3) {
+                    var width = prompt("Please enter the width");
+                    var height = prompt("Please enter the height");
+                    var result = height*width;
+                    alert("The answer is " + result);
+                }
+
+                else if (inp == 4) {
+                    var width = prompt("Please enter the width");
+                    var base = prompt("Please enter the base height");
+                    var result = base*width*0.5;
+                    alert("The answer is " + result);
+                }
+                else {
+                    alert("The input is not valid, please try again.");
+                }
+            }
+
+        </script>
+
+
+    </body>
+
+</html>
